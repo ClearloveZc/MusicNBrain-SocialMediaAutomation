@@ -47,14 +47,17 @@ python src/main.py -v data/videos/my_video.mp4 -t "Check this out!" --tags fyp v
 python src/main.py -v data/videos/my_video.mp4 -t "My Video" --headless
 ```
 
-#### First Time Login
+#### First Time Login (Required)
 
-On first run, the browser will open for you to login manually. Your session will be saved for future runs.
+**Before uploading videos, you must login to your TikTok account first:**
 
 ```bash
-# Just run with any video to trigger login
-python src/main.py -v data/videos/test.mp4
+# Run the login script
+python src/login_only.py
+# Browser opens → Login to TikTok manually → Close browser when done
 ```
+
+Your session will be saved in `chrome_data/` for future runs. You only need to do this once (unless the session expires).
 
 #### Command Line Options
 
