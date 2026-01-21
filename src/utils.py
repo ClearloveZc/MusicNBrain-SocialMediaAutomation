@@ -105,7 +105,7 @@ def setup_logging(logging_config: Dict[str, Any]):
     log_dir.mkdir(exist_ok=True)
     
     logger.add(
-        log_dir / "app.log",
+        log_dir / "tiktok_auto.log",
         format=log_format,
         level=log_level,
         rotation=logging_config.get("rotation", "10 MB"),
