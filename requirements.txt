@@ -1,4 +1,4 @@
-# Mini TikTok Automation System - Dependencies
+# MusicNBrain Social Media Automation - Dependencies
 
 # Selenium automation
 selenium>=4.15.0

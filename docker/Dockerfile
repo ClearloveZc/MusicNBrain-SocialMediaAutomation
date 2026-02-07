@@ -1,4 +1,4 @@
-# Mini TikTok Automation System - Dockerfile
+# MusicNBrain Social Media Automation - Dockerfile
 FROM python:3.11-slim
 
 # Install Chromium and dependencies (works on both AMD64 and ARM64)

@@ -1,5 +1,5 @@
 """
-Mini TikTok Automation System
+MusicNBrain Social Media Automation
 A Selenium-based automation tool for posting videos to TikTok.
 """
 

@@ -10,7 +10,7 @@ services:
     environment:
       - SE_VNC_NO_PASSWORD=1
 
-  # Mini TikTok Automation System
+  # MusicNBrain Social Media Automation
   tiktok-auto:
     build:
       context: ..

@@ -1,4 +1,4 @@
-# Mini TikTok Automation System - Testing & Validation
+# MusicNBrain Social Media Automation - Testing & Validation
 
 ## Environment Verification
 
@@ -22,7 +22,7 @@ $ python src/main.py --help
 usage: main.py [-h] -v VIDEO [-t TITLE] [--tags TAGS [TAGS ...]] [--headless]
                [-c CONFIG]
 
-Mini TikTok Automation System
+MusicNBrain Social Media Automation
 
 options:
   -h, --help            show this help message and exit

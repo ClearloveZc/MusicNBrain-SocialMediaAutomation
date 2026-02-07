@@ -1,8 +1,8 @@
-# Mini TikTok Automation System - Requirements & Planning
+# MusicNBrain Social Media Automation - Requirements & Planning
 
 ## Project Overview
 
-**Project Name**: Mini TikTok Automation System  
+**Project Name**: MusicNBrain Social Media Automation  
 **Project Goal**: Build a TikTok video auto-publishing system
 
 ### Core Capabilities
@@ -41,7 +41,7 @@
 ## Project Structure
 
 ```
-MiniTiktokAutomationSystem/
+MusicNBrain-SocialMediaAutomation/
 ├── src/
 │   ├── __init__.py
 │   ├── main.py              # Entry point

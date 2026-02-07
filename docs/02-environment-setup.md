@@ -1,9 +1,9 @@
-# Mini TikTok Automation System - Environment Setup
+# MusicNBrain Social Media Automation - Environment Setup
 
 ## Project Structure
 
 ```
-MiniTiktokAutomationSystem/
+MusicNBrain-SocialMediaAutomation/
 ├── src/                          # Source code directory
 │   ├── __init__.py               # Package init
 │   ├── main.py                   # Entry point

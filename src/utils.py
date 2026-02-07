@@ -1,6 +1,6 @@
 """
 Utility Functions
-Common helper functions for the Mini TikTok Automation System.
+Common helper functions for the MusicNBrain Social Media Automation.
 """
 
 import sys

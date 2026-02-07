@@ -1,4 +1,4 @@
-# Mini TikTok Automation System 🎬
+# MusicNBrain Social Media Automation 🎬
 
 A Selenium-based automation tool for posting videos to TikTok.
 
@@ -13,8 +13,8 @@ A Selenium-based automation tool for posting videos to TikTok.
 
 ```bash
 # 1. Clone the project
-git clone https://github.com/YOUR_USERNAME/MiniTiktokAutomationSystem.git
-cd MiniTiktokAutomationSystem
+git clone https://github.com/YOUR_USERNAME/MusicNBrain-SocialMediaAutomation.git
+cd MusicNBrain-SocialMediaAutomation
 
 # 2. Setup environment
 python -m venv venv
@@ -94,7 +94,7 @@ docker-compose down
 ## Project Structure
 
 ```
-MiniTiktokAutomationSystem/
+MusicNBrain-SocialMediaAutomation/
 ├── src/
 │   ├── main.py           # Entry point
 │   ├── login_only.py     # Login helper (run this first!)
