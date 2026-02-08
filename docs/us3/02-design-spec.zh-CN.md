@@ -33,6 +33,7 @@ flowchart LR
     CampaignSvc --> ContentSvc
     CampaignSvc --> Store
     CampaignSvc --> Scheduler
+    ContentSvc --> JobQueue
     Scheduler --> JobQueue
     JobQueue --> Orchestrator
     Orchestrator --> TikTok
