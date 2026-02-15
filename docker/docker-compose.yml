@@ -1,16 +1,22 @@
 services:
-  # Selenium standalone Chrome browser
+  # Small-VM optimized Selenium Chromium service (no GPU / no VNC)
   selenium:
     image: selenium/standalone-chromium:latest
     container_name: selenium-chrome
-    shm_size: '2gb'
+    shm_size: "512m"
     ports:
       - "4444:4444"
-      - "7900:7900"  # VNC viewer (password: secret)
     environment:
-      - SE_VNC_NO_PASSWORD=1
+      - SE_START_VNC=false
+      - SE_START_NO_VNC=false
+      - SE_NODE_MAX_SESSIONS=1
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+      - SE_SESSION_REQUEST_TIMEOUT=120
+      - SE_SESSION_RETRY_INTERVAL=2
+    mem_limit: "900m"
+    cpus: 1.0
 
-  # MusicNBrain Social Media Automation
+  # MusicNBrain Social Media Automation (small VM mode)
   tiktok-auto:
     build:
       context: ..
@@ -25,3 +31,9 @@ services:
     environment:
       - SELENIUM_REMOTE_URL=http://selenium:4444/wd/hub
       - LOG_LEVEL=INFO
+      - HEADLESS_MODE=true
+      - SMALL_VM_MODE=true
+      - CHROME_WINDOW_WIDTH=1280
+      - CHROME_WINDOW_HEIGHT=720
+    mem_limit: "700m"
+    cpus: 1.0

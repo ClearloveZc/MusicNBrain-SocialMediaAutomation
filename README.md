@@ -7,6 +7,7 @@ A Selenium-based automation tool for posting videos to TikTok.
 - 🔐 Automatic login via Chrome user data
 - 📹 Automated video upload with title and hashtags
 - 🐳 Docker support for headless operation
+- ⚡ Small-VM / no-GPU Docker optimization
 - 🛡️ Anti-detection using undetected-chromedriver
 
 ## Quick Start (5 Steps)
@@ -75,7 +76,7 @@ python src/export_cookies.py
 # Browser opens → Login → Press Enter
 ```
 
-### Step 2: Run in Docker
+### Step 2: Run in Docker (Small VM / No GPU Optimized by Default)
 
 ```bash
 cd docker
@@ -88,6 +89,20 @@ docker-compose run tiktok-auto python src/main.py \
 
 docker-compose down
 ```
+
+### Small VM Runtime Defaults
+
+The Docker setup is tuned for low-resource servers:
+
+- `HEADLESS_MODE=true` (no display needed)
+- `SMALL_VM_MODE=true` (low-memory browser flags)
+- Selenium VNC disabled to reduce overhead
+- Reduced shared memory (`shm_size: 512m`)
+- Resource caps:
+  - `selenium`: `cpus: 1.0`, `mem_limit: 900m`
+  - `tiktok-auto`: `cpus: 1.0`, `mem_limit: 700m`
+
+If your VM has more resources, edit `docker/docker-compose.yml`.
 
 ---
 
@@ -124,6 +139,7 @@ MusicNBrain-SocialMediaAutomation/
 | Upload fails | Check `logs/tiktok_auto.log` |
 | Browser not found | Install Google Chrome |
 | Docker connection error | Wait a few seconds and retry |
+| Docker on small VM is unstable | Increase `shm_size` to `1gb` in `docker/docker-compose.yml` |
 
 ---
 
