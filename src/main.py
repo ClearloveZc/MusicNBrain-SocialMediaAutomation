@@ -3,12 +3,18 @@ MusicNBrain Social Media Automation - Main Entry Point
 """
 
 import argparse
+import os
 from pathlib import Path
 from loguru import logger
 
 from browser import BrowserManager
 from uploader import TikTokUploader
 from utils import load_config, setup_logging
+
+
+def _is_truthy(value: str) -> bool:
+    """Check if an environment string value should be treated as True."""
+    return value.strip().lower() in {"1", "true", "yes", "on"}
 
 
 def parse_args():
@@ -68,8 +74,8 @@ def main():
     logger.info(f"Starting MusicNBrain Social Media Automation v0.1.0")
     logger.info(f"Video: {video_path}")
     
-    # Override headless mode if specified
-    if args.headless:
+    # Override headless mode from CLI or environment
+    if args.headless or _is_truthy(os.environ.get("HEADLESS_MODE", "")):
         config["browser"]["headless"] = True
     
     browser_manager = None
